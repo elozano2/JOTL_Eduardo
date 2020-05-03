@@ -55,7 +55,7 @@ class RingtoneService : Service() {
     }
 
     private fun fireNotification(){
-        var main_activity_intent : Intent = Intent(this,MainActivity::class.java)
+        var main_activity_intent : Intent = Intent(this,Schedule::class.java)
         var pi : PendingIntent = PendingIntent.getActivity(this,0,main_activity_intent,0)
         val defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
 

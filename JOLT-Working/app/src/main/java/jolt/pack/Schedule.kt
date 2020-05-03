@@ -21,7 +21,6 @@ class Schedule : Fragment() {
     lateinit var am: AlarmManager
     lateinit var tp: TimePicker
     lateinit var update_text: TextView
-    lateinit var con : Context
     lateinit var btnStart: Button
     lateinit var btnStop: Button
     var hour: Int = 0
@@ -35,9 +34,8 @@ class Schedule : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val rootView = inflater.inflate(R.layout.fragment_schedule, container, false)
-        val activity = activity as Context
 
-        am = getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        am = activity?.getSystemService(Context.ALARM_SERVICE) as AlarmManager
         tp = rootView.findViewById<TimePicker>(R.id.tp)
         update_text = rootView.findViewById(R.id.update_text) as TextView
         btnStart = rootView.findViewById(R.id.start_alarm) as Button
@@ -72,24 +70,30 @@ class Schedule : Fragment() {
                 if (min < 10 ) {
                     min_str = "0$min"
                 }
-                set_alarm_test("Alarm set to: $hr_str : $min_str")
+                set_alarm_text("Alarm set to: $hr_str : $min_str")
                 myIntent.putExtra("extra", "on")
                 pi = PendingIntent.getBroadcast(activity, 0, myIntent, PendingIntent.FLAG_UPDATE_CURRENT)
-
-
+                am.setExact(AlarmManager.RTC_WAKEUP, calendar.timeInMillis,pi)
             }
-
-
+        })
+        btnStop.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(v:View?) {
+                set_alarm_text("Alarm off")
+                pi = PendingIntent.getBroadcast(activity, 0, myIntent, PendingIntent.FLAG_UPDATE_CURRENT)
+                am.cancel(pi)
+                myIntent.putExtra("extra","off")
+                getActivity()?.sendBroadcast(myIntent)
+            }
         })
 
+        return rootView
         }
 
-        return rootView
+        private fun set_alarm_text(s: String) {
+            update_text.setText(s)
+        }
     }
 
-private fun set_alarm_test(s:String) {
-    update_text.setText(s)
-}
 
 
     /*fabBtn.setOnClickListener {
@@ -109,4 +113,3 @@ private fun set_alarm_test(s:String) {
     /* override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
          super.onViewCreated(view, savedInstanceState)
      }*/
-}

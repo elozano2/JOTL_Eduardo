@@ -35,4 +35,5 @@
     <string name="start_alarm">Start_alarm</string>
     <string name="stop_alarm">Stop alarm</string>
     <string name="did_you_set_the_alarm">did you set the alarm?</string>
+    <string name="stop_time">stop_time</string>
 </resources>
