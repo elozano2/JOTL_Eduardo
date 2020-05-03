@@ -32,7 +32,7 @@
     <string name="time_tester">Time Tester</string>
     <string name="schedule_a_job" />
     <string name="set_alarm" />
-    <string name="start_alarm">Start_alarm</string>
+    <string name="start_alarm">Start alarm</string>
     <string name="stop_alarm">Stop alarm</string>
     <string name="did_you_set_the_alarm">did you set the alarm?</string>
     <string name="stop_time">stop_time</string>

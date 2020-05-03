@@ -1,15 +1,16 @@
 package jolt.pack
 
-import android.app.Notification
-import android.app.NotificationManager
-import android.app.PendingIntent
-import android.app.Service
+import android.app.*
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import android.media.Ringtone
 import android.media.RingtoneManager
 import android.net.Uri
+import android.os.Build
 import android.os.IBinder
+import android.widget.RemoteViews
+import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 
 class RingtoneService : Service() {
@@ -22,7 +23,9 @@ class RingtoneService : Service() {
         return null
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onStartCommand(intent: Intent?, flags: Int, startId : Int) :Int {
+
         var state : String = intent!!.getStringExtra("extra")
         assert(state!=null)
         when(state){
@@ -60,13 +63,13 @@ class RingtoneService : Service() {
         val defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
 
         var notify_manager: NotificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-        val notification: Notification = NotificationCompat.Builder(this)
+        var notification = NotificationCompat.Builder(this)
             .setContentTitle("Alarm is going off")
             .setSmallIcon(R.mipmap.ic_launcher)
             .setSound(defaultSoundUri)
             .setContentText("Click Me")
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .setContentIntent(pi)
-            .setAutoCancel(true)
             .build()
 
         notify_manager.notify(0, notification)
