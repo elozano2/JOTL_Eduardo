@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">jolt</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="app_title">JÖLT</string>
+    <string name="cont">CONTINUE</string>
+    <string name="vibrate">VIBRATE</string>
+    <string name="account">Account</string>
+    <string name="calendar">Calendar</string>
+    <string name="rewards">Rewards</string>
+    <string name="home">Home</string>
+    <string name="schedule">Schedule</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_to">Welcome to…</string>
+    <string name="connect">Connect to Device</string>
+    <string name="monitor">Start Monitoring</string>
+    <string name="welcome_instruction">Please connect your bluetooth device</string>
+    <string name="err_message_no_bt">Your device is not compatible with this app</string>
+    <string name="button">Button</string>
+    <string name="textview">TextView</string>
+    <string name="pick_a_time">Pick a time</string>
+    <string name="set_a_time">Set a Time</string>
+    <string name="set_time">Set Time</string>
+    <string name="click_here">Click Here</string>
+    <string name="time_tester">Time Tester</string>
+    <string name="schedule_a_job" />
+    <string name="set_alarm" />
+    <string name="start_alarm">Start_alarm</string>
+    <string name="stop_alarm">Stop alarm</string>
+    <string name="did_you_set_the_alarm">did you set the alarm?</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#333231</color>
+    <color name="bot_nav_back">#64CE04</color>
+    <color name="bot_nav_name">#9C0264</color>
+    <color name="main_color">#FFB700</color>
+    <color name="dark_color">#333231</color>
+</resources>
