@@ -13,6 +13,7 @@
         android:text="@string/schedule_a_job"
         android:timePickerMode="spinner"/>
 
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -49,6 +50,75 @@
         android:layout_below="@+id/start_alarm"
         android:layout_centerHorizontal="true" />
 
+    <Button
+        android:id="@+id/sundayBtn"
+        android:layout_width="57dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="327dp"
+        android:layout_marginLeft="327dp"
+        android:layout_marginTop="340dp"
+        android:layout_marginBottom="270dp"
+        android:text="@string/su" />
 
+    <Button
+        android:id="@+id/tuesdayBtn"
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="77dp"
+        android:layout_marginLeft="77dp"
+        android:layout_marginTop="340dp"
+        android:layout_marginBottom="270dp"
+        android:text="@string/t" />
+
+    <Button
+        android:id="@+id/wednesdayBtn"
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="127dp"
+        android:layout_marginLeft="127dp"
+        android:layout_marginTop="340dp"
+        android:layout_marginBottom="270dp"
+        android:text="@string/w" />
+
+    <Button
+        android:id="@+id/thursdayBtn"
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="177dp"
+        android:layout_marginLeft="177dp"
+        android:layout_marginTop="340dp"
+        android:layout_marginBottom="270dp"
+        android:text="@string/th" />
+
+    <Button
+        android:id="@+id/fridayBtn"
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="227dp"
+        android:layout_marginLeft="227dp"
+        android:layout_marginTop="340dp"
+        android:layout_marginBottom="270dp"
+        android:text="@string/f" />
+
+    <Button
+        android:id="@+id/saturdayBtn"
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="277dp"
+        android:layout_marginLeft="277dp"
+        android:layout_marginTop="340dp"
+        android:layout_marginBottom="270dp"
+        android:text="@string/sa" />
+
+    <Button
+        android:id="@+id/mondayBtn"
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="340dp"
+        android:layout_marginBottom="270dp"
+        android:text="@string/m" />
 
 </RelativeLayout>
+
