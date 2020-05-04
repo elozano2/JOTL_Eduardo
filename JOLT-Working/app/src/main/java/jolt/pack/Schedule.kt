@@ -408,9 +408,8 @@ class Schedule : Fragment() {
         private fun set_alarm_text(s: String) {
             update_text.setText(s)
             timeTv.setText(s)
-
-
         }
+
     }
 
 class MyAdapter(private val myDataset : Array<String>) : RecyclerView.Adapter<MyAdapter.ViewHolder>(){
@@ -435,4 +434,3 @@ class MyAdapter(private val myDataset : Array<String>) : RecyclerView.Adapter<My
     override fun getItemCount() = myDataset.size
 
 }
-
